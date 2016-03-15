@@ -11,3 +11,16 @@
 .list {
 	font-size: .8em;
 }
+
+h2:hover {
+ outline: dotted red;
+}
+
+#resume-title:hover {
+ outline: dashed black;
+}
+
+
+section > ul > li {
+ background-color: red;
+}\
