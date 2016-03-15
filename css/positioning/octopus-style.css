@@ -1,0 +1,20 @@
+#octupus {
+	margin-left: 450px;
+	margin-top: 120px;
+	z-index: 10;
+	float:left
+	position:relative;
+} 
+#glasses {
+	margin-left: 490px;
+	margin-top:5px;
+	z-index:30;
+	position:relative;
+	float:left;
+}
+#hat {
+	margin-left: 425px;
+	margin-top: -370px;
+	position:relative;
+	z-index:20;
+}
