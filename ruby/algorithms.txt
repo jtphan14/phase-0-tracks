@@ -19,3 +19,5 @@ Make Coffee:
 -Let coffee steep for 4 minutes.
 -when 4 minutes is up, plunge the press (push down on lever). 
 -Coffee is ready!
+-Pour 8oz coffee into mug.
+
