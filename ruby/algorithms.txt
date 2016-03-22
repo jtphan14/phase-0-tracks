@@ -1,0 +1,23 @@
+Elevator: 
+-When person walks into the elevator, ask person what level they want to go to.
+	-Once answer is received, scan each button to see if that is they level they indicated.
+		-Start from the bottom left corner (ie. Bottom Row, Left Button). Move right and check each button until there are no more buttons to the right. If there are no more buttons to the right, go to the next line up and to the left most button. Move right and repeat process until button number matches level.
+	-Once level matches button number. Press button
+	-Elevator will go to desired level.
+
+
+Make Coffee:
+-Pour ground coffee into measuring cup until ground coffee reaches 1/4 cup.
+-Pour coffee beans into french press
+-Pour water into measuring cup until water reaches 2 cups.
+-Pour water into water heater
+-Press power button to turn water heater on.
+-Wait until water heater boils and signal turns red.
+-After water heater signal turns red, wait 1 minute.
+-After 1 minute, pour water into french press.
+-With a stir stick, Stir coffee and water vigorously in an up and down motion for 30 seconds.
+-Let coffee steep for 4 minutes.
+-when 4 minutes is up, plunge the press (push down on lever). 
+-Coffee is ready!
+-Pour 8oz coffee into mug.
+
