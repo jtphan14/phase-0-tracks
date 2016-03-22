@@ -1,0 +1,26 @@
+#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #E9E5DC;
+	border-radius: 10px ;
+	padding-top: .05px;
+}
+
+.list {
+	font-size: .8em;
+}
+
+h2:hover {
+ outline: dotted red;
+}
+
+#resume-title:hover {
+ outline: dashed black;
+}
+
+
+section > ul > li {
+ background-color: red;
+}\
