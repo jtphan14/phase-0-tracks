@@ -1,0 +1,24 @@
+body {
+background-color: white;
+background-image: url("https://octodex.github.com/images/codercat.jpg");
+font-family: arial;
+color: red;
+}
+.column-1 {
+background-color: blue;
+border: solid;
+width: 300px;
+display: inline-block;
+vertical-align: top;
+margin: 20px;
+padding: 5px;
+}
+.column-2 {
+background-color: pink;
+border: dashed;
+width: 250px;
+margin: 20px;
+display: inline-block;
+vertical-align: top;
+padding: 5px;
+}
