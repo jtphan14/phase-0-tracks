@@ -26,6 +26,11 @@ def employee_vampire_verification
     puts "Our company cafeteria serves garlic bread. Should we order some for you?"
     order = gets.chomp.downcase
 
+    until (order == "yes" || order == "no")
+    	puts "Please answer yes/no.  Would you like to order some garlic bread?"
+    	order = gets.chomp.downcase
+    end
+
     if order == "yes"
         garlic_bread = true
     elsif order == "no"
@@ -37,14 +42,16 @@ def employee_vampire_verification
     puts "Would you like to enroll in the company's health insurance?"
     enroll = gets.chomp.downcase
 
-    if enroll == "yes"
-        health_insurance = true
-    elsif enroll == "no"
-        health_insurance = false
-    else
+    until (enroll == "yes" || enroll == "no")
         puts "Please answer yes/no. Would you like to enroll in the company's health insurance?"
         enroll = gets.chomp.downcase
-    end
+   	 	end
+   	if enroll == "yes"
+        health_insurance = true
+    	elsif enroll == "no"
+        health_insurance = false
+    	else
+	end
 
     puts "Please list your allergies, one at a time. Type ""done"" when finished"
     allergies = gets.chomp
