@@ -26,29 +26,24 @@ def employee_vampire_verification
     puts "Our company cafeteria serves garlic bread. Should we order some for you?"
     order = gets.chomp.downcase
 
-    until order == "yes" || order == "no"
-        puts "Please answer yes or no. Our company cafeteria serves garlic bread. Should we order some for you?"
-        order = gets.chomp.downcase        
-    end
-
     if order == "yes"
         garlic_bread = true
-    else 
+    elsif order == "no"
         garlic_bread = false
+    else puts "Please answer yes/no. Our company cafeteria serves garlic bread. Should we order some for you?"
+        order = gets.chomp.downcase
     end
 
     puts "Would you like to enroll in the company's health insurance?"
-    enroll = gets.chomp
-
-    until enroll == "yes" || enroll == "no"
-        puts "Please answer yes or no. Would you like to enroll in the company's health insurance?"
-        order = gets.chomp.downcase        
-    end
+    enroll = gets.chomp.downcase
 
     if enroll == "yes"
         health_insurance = true
-    else
+    elsif enroll == "no"
         health_insurance = false
+    else
+        puts "Please answer yes/no. Would you like to enroll in the company's health insurance?"
+        enroll = gets.chomp.downcase
     end
 
     puts "Please list your allergies, one at a time. Type ""done"" when finished"
@@ -63,9 +58,10 @@ def employee_vampire_verification
         end
 
     if allergies == "sunshine"
-    elsif(vampire_name==false) && (age_correct == true) && (garlic_bread == true || health_insurance == true) == true
+    elsif(vampire_name!=true) && (age_correct == true) && (garlic_bread == true || health_insurance == true) == true
     	puts "Probably not a vampire"
-    elsif (vampire_name==false)  && (age_correct == false) && (garlic_bread == false) && (health_insurance == true) == true
+        #Used != to demonstrate knowledge of this code
+    elsif (vampire_name==true)  && (age_correct == false) && (garlic_bread == false) && (health_insurance == true) == true
     	puts "Probably a vampire"
     elsif (vampire_name==false)  && (age_correct == false) && (garlic_bread == true) && (health_insurance == false) == true
         puts "Probably a vampire"
@@ -84,3 +80,4 @@ until num >= users
     num +=1
 end
 
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
