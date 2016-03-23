@@ -51,8 +51,19 @@ def employee_vampire_verification
         health_insurance = false
     end
 
+    puts "Please list your allergies, one at a time. Type ""done"" when finished"
+    allergies = gets.chomp
 
-    if (vampire_name==false) && (age_correct == true) && (garlic_bread == true || health_insurance == true) == true
+        if allergies == "sunshine"
+            puts "Probably a vampire"
+        elsif allergies == "done"
+        else
+            puts "Please list your allergies, one at a time. Type ""done"" when finished"
+            allergies=gets.chomp
+        end
+
+    if allergies == "sunshine"
+    elsif(vampire_name==false) && (age_correct == true) && (garlic_bread == true || health_insurance == true) == true
     	puts "Probably not a vampire"
     elsif (vampire_name==false)  && (age_correct == false) && (garlic_bread == false) && (health_insurance == true) == true
     	puts "Probably a vampire"
