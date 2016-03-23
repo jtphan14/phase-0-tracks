@@ -1,5 +1,16 @@
+puts "How many user's will be processed?"
+users = gets.chomp.to_i
+
+until 
+
 puts "What is your name?"
 name = gets.chomp
+
+if name == "Drake Cula"|| name == "Tu Fang"
+    vampire_name = true
+else
+    vampire_name = false
+end
 
 puts "How old are you?"
 age = gets.chomp.to_i
@@ -38,15 +49,17 @@ else
     health_insurance = false
 end
 
-case
-when age_correct == true && (garlic_bread == true || health_insurance == true) == true
+
+if (vampire_name==false) && (age_correct == true) && (garlic_bread == true || health_insurance == true) == true
 	puts "Probably not a vampire"
-when (age_correct == false && (garlic_bread == false && health_insurance) == false) == true
-	puts "Almost certainly a vampire"
-when age_correct == false && (garlic_bread == false || health_insurance == false) == true
+elsif (vampire_name==false)  && (age_correct == false) && (garlic_bread == false) && (health_insurance == true) == true
 	puts "Probably a vampire"
-when name == "Drake cula" || name == "Tu Fang"
-	puts "Definitely a vampire"
+elsif (vampire_name==false)  && (age_correct == false) && (garlic_bread == true) && (health_insurance == false) == true
+    puts "Probably a vampire"
+elsif (vampire_name==false)  && (age_correct == false) && (garlic_bread == false) && (health_insurance == false) == true
+    puts "Almost certainly a vampire"
+elsif  (vampire_name==true) 
+    puts "Definitely a vampire"
 else
 	puts "Results inconclusive"
 end
