@@ -25,11 +25,11 @@ p " suspects".prepend("the usual")
 p "The case of the disappearing last letter".chop
 # => “The case of the disappearing last lette”
 
-# “The mystery of the missing first letter”.<???>
+p "The mystery of the missing first letter".reverse.chop.reverse
 # => “he mystery of the missing first letter”
 
-# “Elementary  ,    my   dear      Watson!”.<???>""
-# => “Elementary, my dear Watson!”
+p "Elementary  ,    my   dear      Watson!".squeeze("   ")
+# => “Elementary , my dear Watson!”
 
 #“z”.<???>
 # => 122 
