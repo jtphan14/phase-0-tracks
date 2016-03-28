@@ -7,7 +7,7 @@
 p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# “zom”.<???>
+p "zom".insert(2, 'o')
 # => “zoom”
 
 p "enhance".center(15)
@@ -31,7 +31,7 @@ p "The mystery of the missing first letter".reverse.chop.reverse
 p "Elementary  ,    my   dear      Watson!".squeeze("   ")
 # => “Elementary , my dear Watson!”
 
-#“z”.<???>
+p "z".hex
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
