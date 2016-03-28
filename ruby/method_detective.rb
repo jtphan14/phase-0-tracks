@@ -16,7 +16,7 @@ p "enhance".center(15)
 p "Stop! You’re under arrest!".upcase
 # => “STOP! YOU’RE UNDER ARREST!”
 
-# “the usual”.<???>
+p "the usual".concat(" suspects")
 #=> “the usual suspects”
 
 p " suspects".prepend("the usual")
@@ -31,7 +31,7 @@ p "The mystery of the missing first letter".reverse.chop.reverse
 p "Elementary  ,    my   dear      Watson!".squeeze("   ")
 # => “Elementary , my dear Watson!”
 
-p "z".hex
+p "z".oct
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
