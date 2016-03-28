@@ -22,7 +22,7 @@ p "Stop! You’re under arrest!".upcase
 #“ suspects”.<???>
 #=> “the usual suspects”
 
-# “The case of the disappearing last letter”.<???>
+p "The case of the disappearing last letter".chop
 # => “The case of the disappearing last lette”
 
 # “The mystery of the missing first letter”.<???>
