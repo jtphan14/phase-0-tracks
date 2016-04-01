@@ -20,11 +20,11 @@ food_court = {
 	
 	panda_express:{
 		meals:{
-			Combo_1:{
+			combo_1:{
 				items_inc:['Fried Rice', 'Orange Chicken'],
 				price: 6
 			},
-			Combination_2:{
+			combo_2:{
 				items_inc:['Fried Rice', 'Brocolli Beef'],
 				price: 6
 			}
@@ -44,3 +44,7 @@ food_court = {
 		lemonade_flavors:['original', 'strawberry', 'kiwi']
 	}
 }	
+
+p food_court[:mcdonalds][:meals][:number_two][:items_inc][2]
+p food_court[:panda_express][:a_la_carte_prices]
+p food_court[:hot_dog_on_a_stick][:lemonade_flavors][0]
