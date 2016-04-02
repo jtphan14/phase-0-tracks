@@ -12,9 +12,13 @@
 def vowel (letter)
 	vowels = "aeiou"
 	vowel_idx = vowels.index(letter)
-	vowels[vowels_ix +1]
+	return 'a' if letter == 'u'
+	vowels[vowel_idx +1]
 end
+
 
 #If consonant, we need to change to the next consonant.
 
 #Print out program
+
+vowel("a")
