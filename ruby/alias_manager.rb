@@ -16,8 +16,15 @@ def vowel (letter)
 	vowels[vowel_idx +1]
 end
 
-
 #If consonant, we need to change to the next consonant.
+
+def consonant (letter)
+	consonant = "bcdfghjklmnpqrstvwxyz"
+	cons_idx = consonant.index(letter)
+	return 'b' if letter == 'z'
+	consonant[cons_idx +1]
+end
+
 
 #Print out program
 
