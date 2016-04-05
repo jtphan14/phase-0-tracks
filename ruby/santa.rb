@@ -18,6 +18,10 @@ class Santa
 
 end
 
-grinch = Santa.new("male","vietnamese")
-grinch.speak
-grinch.eat_milk_and_cookies("chocolate chip cookie")
+santas = []
+genders = ["male", "female"]
+ethnicities = ["asian", "n/a", "white"]
+genders.length.times do |i|
+  santas << Santa.new(genders[i], ethnicities[i])
+end
+ p santas
