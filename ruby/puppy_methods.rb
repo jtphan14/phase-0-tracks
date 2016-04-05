@@ -8,9 +8,14 @@ class Puppy
   def speak(i)
   	(i).times {puts "Woof"}
   end
+
+  def roll_over
+  	puts "Rolls Over"
+  end
+
 end
 
 fido = Puppy.new
 fido.fetch("ball")
 fido.speak(3)
-
+fido.roll_over
