@@ -21,6 +21,10 @@ class Puppy
   	puts "Bang! (Dog rolls on side)"
   end
 
+  def initialize
+  	puts "Initializing new puppy instance..."
+  end
+
 end
 
 fido = Puppy.new
@@ -29,3 +33,5 @@ fido.speak(3)
 fido.roll_over
 fido.dog_years(3)
 fido.bang
+
+spot = Puppy.new
