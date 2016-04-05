@@ -17,6 +17,10 @@ class Puppy
   	puts (i)*7 
   end
 
+  def bang
+  	puts "Bang! (Dog rolls on side)"
+  end
+
 end
 
 fido = Puppy.new
@@ -24,3 +28,4 @@ fido.fetch("ball")
 fido.speak(3)
 fido.roll_over
 fido.dog_years(3)
+fido.bang
