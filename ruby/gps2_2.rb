@@ -74,3 +74,28 @@ add_item("ice_cream", 4, current_list)
 remove_item("lemonade", current_list)
 update_quantity("ice_cream", 1, current_list)
 pretty_list(current_list)
+
+=begin
+Reflection:
+I learned that it pays to take the time to think about the pseudocode, so you can plan 
+how you want to approach each challenge or code. I think when I'm pseudocoding, I also 
+need to think about what methods I want to use, so that I can do a more thorough job 
+pseudocoding.
+
+Using a hash, you can have the quantity updated as there will be a key and a value.  With an 
+array, you have less items that you will need to update
+
+A method returns whatever you want it to return. It is called a return value, but it can return
+a string, hash, array, etc.
+
+You can pass variables, integers, strings, hash, arrays, and much more into methods.
+
+To pass information between methods, you can run the method and assign it to a variable. 
+From there, you can use the variable as an argument on the next method.
+
+At first, I was extremely confused with this challenge. Although I understood the concepts
+of arrays, hashes, and methods individually... connecting them together proved to be a challenge.
+I really could not understand how to get the result from one method over to the next. However,
+after working on it and seeing how it works, I have a much better understanding.
+	
+end
