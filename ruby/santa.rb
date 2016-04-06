@@ -1,4 +1,5 @@
 class Santa
+	attr_reader :gender, :ethnicity
 
 	def initialize (gender, ethnicity)
 		puts "Initalizing Santa instance..."
@@ -26,13 +27,6 @@ class Santa
 	@reindeer_ranking.delete_if{|reindeer| reindeer == reindeer_name}
 	#add reindeer name to end of array	
 	@reindeer_ranking.insert(-1, reindeer_name)
-	end
-	#getter method
-	def gender
-		@gender
-	end
-	def ethnicity
-		@ethnicity
 	end
 
 end
