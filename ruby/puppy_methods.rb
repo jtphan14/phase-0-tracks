@@ -108,5 +108,5 @@ cats_array.each {|cat| cat.sleep}
 cats_array.each {|cat| cat.speak(3)}
 
 garfield = Cats.new
-garfield.speak(2)
+garfield.speak(3)
 garfield.sleep
