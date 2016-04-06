@@ -1,5 +1,6 @@
 class Santa
 	attr_reader :gender, :ethnicity
+	attr_accessor :age
 
 	def initialize (gender, ethnicity)
 		puts "Initalizing Santa instance..."
@@ -32,14 +33,21 @@ class Santa
 end
 
 santas = []
-genders = ["male", "female"]
-ethnicities = ["asian", "n/a", "white"]
-genders.length.times { |i|
-  santas << Santa.new(genders[i], ethnicities[i]) }
-p santas
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "Vietnamese", "Hawaiian", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+age_array = []
+0.upto(140) {|i| age_array << i}
 
-
+i=0
+until i == 130
+	new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	new_santa.age = age_array.sample
+	p new_santa
+	i+=1
+end
+=begin
 grinch = Santa.new("female", "n/a")
 grinch.celebrate_birthday
 p grinch.get_mad_at("Rudolph")
 puts "Grinch is #{grinch.gender} and #{grinch.ethnicity}"
+=end
