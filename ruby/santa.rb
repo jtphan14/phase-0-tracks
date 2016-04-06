@@ -4,7 +4,7 @@ class Santa
 		puts "Initalizing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
-		@reinder_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
 
@@ -16,12 +16,36 @@ class Santa
 		puts "That was a good #{cookie}"
 	end
 
+	def celebrate_birthday
+		puts "Santa's Age: #{@age +=1}"
+	end
+
+	def get_mad_at(reindeer_name)
+	#find reindeer name in array
+	#delete reindeer name
+	@reindeer_ranking.delete_if{|reindeer| reindeer == reindeer_name}
+	#add reindeer name to end of array	
+	@reindeer_ranking.insert(-1, reindeer_name)
+	end
+	#getter method
+	def gender
+		@gender
+	end
+	def ethnicity
+		@ethnicity
+	end
+
 end
 
 santas = []
 genders = ["male", "female"]
 ethnicities = ["asian", "n/a", "white"]
-genders.length.times do |i|
-  santas << Santa.new(genders[i], ethnicities[i])
-end
- p santas
+genders.length.times { |i|
+  santas << Santa.new(genders[i], ethnicities[i]) }
+p santas
+
+
+grinch = Santa.new("female", "n/a")
+grinch.celebrate_birthday
+p grinch.get_mad_at("Rudolph")
+puts "Grinch is #{grinch.gender} and #{grinch.ethnicity}"
