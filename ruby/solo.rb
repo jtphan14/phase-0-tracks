@@ -70,6 +70,6 @@ loop {
 #End Loop
 }
 #Loop through array and print out attributes
-list_of_students.each{|student|p student}
+list_of_students.each{|student|p "Confirmed -- Name: #{student.name} Age: #{student.age} School: #{student.school}"}
 
 
