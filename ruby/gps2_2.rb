@@ -97,5 +97,5 @@ At first, I was extremely confused with this challenge. Although I understood th
 of arrays, hashes, and methods individually... connecting them together proved to be a challenge.
 I really could not understand how to get the result from one method over to the next. However,
 after working on it and seeing how it works, I have a much better understanding.
-	
+
 =end
