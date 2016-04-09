@@ -13,6 +13,9 @@ attr_accessor :get_items
 	def delete_item(x)
 		@get_items.delete(x)
 	end
-
+#Retrieves an item by index
+	def get_item(x)
+		@get_items.fetch(x)
+	end
 end
 
