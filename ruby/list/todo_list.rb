@@ -9,7 +9,10 @@ attr_accessor :get_items
 	def add_item(x)
 		@get_items.push(x)
 	end
-
+#Delete Add Item Method
+	def delete_item(x)
+		@get_items.delete(x)
+	end
 
 end
 
