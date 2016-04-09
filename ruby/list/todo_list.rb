@@ -1,13 +1,15 @@
 class TodoList
-#Create Initialize Method	
-attr_accessor :get_items
 
+attr_accessor :get_items
+#Create Initialize Method	
 	def initialize (get_items)
 		@get_items = get_items
+	end
+#Create Add Item Method
+	def add_item(x)
+		@get_items.push(x)
 	end
 
 
 end
 
-p list = TodoList.new(["do the dishes", "mow the lawn"])
-p list.get_items
