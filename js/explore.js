@@ -7,14 +7,11 @@
 
 
 var reverseString = ""
-function reverse(string) {
+var reverse = function(string) {
 	for (var i = (string.length-1) ; i >= 0; i--) {reverseString = reverseString + string[i]
 	}
 	console.log(reverseString)
 }
 //driver code
-holaBackwards = reverse("hola")
-
-
-if (1 == 1) {
-	holaBackwards}
+var holaBackwards = reverse("hola");
+reverse("cow")
