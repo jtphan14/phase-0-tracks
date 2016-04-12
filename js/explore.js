@@ -6,11 +6,15 @@
 //The loop will continue until it reaches the first letter
 
 
-reverseString = ""
+var reverseString = ""
 function reverse(string) {
 	for (var i = (string.length-1) ; i >= 0; i--) {reverseString = reverseString + string[i]
 	}
 	console.log(reverseString)
 }
 //driver code
-reverse("hola")
+holaBackwards = reverse("hola")
+
+
+if (1 == 1) {
+	holaBackwards}
