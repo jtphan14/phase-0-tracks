@@ -129,7 +129,11 @@ end
 # On your own, add a commented reflection section to yourmy_solution.rb file. Answer the following questions in your reflection:
 
 # What are the differences between the two different hash syntaxes shown in the state_data file?
+# The arrow hash is used when you have one identifier, the colons are used to identify symbols 
 # What does require_relative do? How is it different from require?
+# Require relative allows you to access file within your directory. It is different then require where you need the full name.
 # What are some ways to iterate through a hash?
+#You can do .each or .map
 # When refactoring virus_effects, what stood out to you about the variables, if anything?
+# I think that if you use a lot of different variables, it helps to refactor.
 # What concept did you most solidify in this challenge?
