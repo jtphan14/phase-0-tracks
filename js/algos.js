@@ -1,8 +1,6 @@
 //Release 0: Find the Longest Word
 //Create a function that will take an array of words and return the longest word in the array
 
-
-
 //Create Function and Set Up Opening Variables
 //Variable1: An empty array that will be used to store the length of each phrase
 //Variable2: An integer that will contain the count of the longest word
@@ -23,6 +21,25 @@ function longestPhrase(array) {var lengthOfPhrase = []; var longest = 0;
 		}
 	}
 }
+
+//Release 1: Find a Key-Value Match
+//Write a function that takes two objects and checks to see if the objects share one key-value pair.
+////NOTE: From my understanding, the objects would have the same key and different values, per the example.
+
+//Create Function that takes in two objects.
+//Loop through the object and create an if/else statement where it will loop through the second object.
+//If there is  match, return true. Else return False
+
+
+
+
+
+
+
+
+
+
+
 //Driver Code
 longestPhrase(["kitten", "dog", "orangutan"])
 longestPhrase(["long", "longer", "longest"])
