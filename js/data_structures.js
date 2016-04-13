@@ -39,7 +39,7 @@ function Car(model,color,isAutomatic) {
     console.log("beep beep")
   };
 }
-//Driver Code
+//Driver Code -
 var alexCar = new Car("Honda","Blue", false);
 console.log(alexCar)
 alexCar.horn();
@@ -48,4 +48,5 @@ alexCar.shift();
 var jaqCar = new Car("Audi", "Black", true);
 console.log(jaqCar);
 jaqCar.shift()
+
 
