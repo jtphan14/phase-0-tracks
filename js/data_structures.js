@@ -1,3 +1,4 @@
+//Release 0
 var colors = ["blue", "red", "green", "orange"];
   
 var horseNames = ["Tony", "Brevit", "Bojack", "Ed"];
@@ -7,24 +8,44 @@ horseNames.push("Joe")
 
 console.log(colors, horseNames)
 
-
-
-// two functions that iterate through the arrays. Each output is then put into the hash values
-
-// funcion (horseNames) => 
-
-
-
+//Release 1
 var matcher = {};
-
-
 
 for (var i = 0; i < horseNames.length; i++) {
   matcher[horseNames[i]] = colors[i]}
   
 console.log(matcher)
 
+//Release 2
+function Car(model,color,isAutomatic) {
+  console.log("On the assembly line:", this)
 
+  
+  this.model = model;
+  this.color = color;
+  this.isAutomatic = isAutomatic;
+  
+  this.shift = function() {
+    if(this.isAutomatic) {
+      console.log("Enjoy driving right now!");
+    } else {
+      console.log("Back to driving school to learn how to drive stick!");
+    }
+  };  
+  
+  this.horn = function() {
+    console.log("beep beep")
+  };
+}
+
+var alexCar = new Car("Honda","Blue", false);
+console.log(alexCar)
+alexCar.horn();
+alexCar.shift();
+
+var jaqCar = new Car("Audi", "Black", true);
+console.log(jaqCar);
+jaqCar.shift()
 
 
 // var horse = (horseNames[0])
