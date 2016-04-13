@@ -5,13 +5,14 @@
 //On the second loop, the letter will be added to the new variable string
 //The loop will continue until it reaches the first letter
 
-
-var reverseString = ""
-var reverse = function(string) {
+function reverse(string) { var reverseString = "";
 	for (var i = (string.length-1) ; i >= 0; i--) {reverseString = reverseString + string[i]
-	}
-	console.log(reverseString)
+	};
+	return reverseString
 }
 //driver code
-var holaBackwards = reverse("hola");
-reverse("cow")
+if (1 == 1) {
+console.log(reverse('hola'));
+}
+
+
