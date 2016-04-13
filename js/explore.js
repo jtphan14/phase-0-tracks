@@ -10,7 +10,7 @@ function reverse(string) { var reverseString = "";
 	};
 	return reverseString
 }
-//driver code
+//driver code with if loop
 if (1 == 1) {
 console.log(reverse('hola'));
 }
