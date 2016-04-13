@@ -4,6 +4,7 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
+
 p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
@@ -36,4 +37,9 @@ p "z".ord
 # (What is the significance of the number 122 in relation to the character z?)
 
 p "How many times does the letter ‘a’ appear in this string?".count "a"
+<<<<<<< HEAD
 #=> 4
+>>>>>>> master
+=======
+#=> 4
+>>>>>>> master
