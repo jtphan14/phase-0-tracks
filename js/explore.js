@@ -8,10 +8,10 @@
 function reverse(string) { var reverseString = "";
 	for (var i = (string.length-1) ; i >= 0; i--) {reverseString = reverseString + string[i]
 	};
-	console.log(reverseString)
+	return reverseString
 }
-//driver code
-console.log(reverse("hola"))
-reverse("hello")
+//driver code with if loop
+if (1 == 1) {
+console.log(reverse('hola'));
+}
 
-//console.log(holaBackwards)
