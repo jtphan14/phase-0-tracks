@@ -24,12 +24,29 @@ function longestPhrase(array) {var lengthOfPhrase = []; var longest = 0;
 
 //Release 1: Find a Key-Value Match
 //Write a function that takes two objects and checks to see if the objects share one key-value pair.
-////NOTE: From my understanding, the objects would have the same key and different values, per the example.
+
 
 //Create Function that takes in two objects.
 //Loop through the object and create an if/else statement where it will loop through the second object.
 //If there is  match, return true. Else return False
 
+function match(obj1, obj2){objKey1 = []; objKey2 = [];
+
+	for (var prop1 in obj1){
+		objKey1.push(prop1 + ":" + obj1[prop1]);
+	}
+	for (var prop2 in obj2){
+		objKey2.push(prop2 + ":" + obj2[prop2]);
+	}	
+	for (var i = 0; i < objKey1.length; i++) {
+		for (var i = 0; i < objKey2.length; i++)
+		if ((objKey1[i] == objKey2[i])){
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
 
 
 
@@ -40,7 +57,12 @@ function longestPhrase(array) {var lengthOfPhrase = []; var longest = 0;
 
 
 
-//Driver Code
+// Driver Code
+// Release0
 longestPhrase(["kitten", "dog", "orangutan"])
 longestPhrase(["long", "longer", "longest"])
 longestPhrase(["Work", "Work Work", "Work Work Work Work"])
+// Release1
+console.log(match({name: "Joe", age: 2}, {name: "Joe", age: 4}))
+console.log(match({Kobe: 24, Team: "Lakers"}, {Curry:30, Team: "Warriors"}))
+
