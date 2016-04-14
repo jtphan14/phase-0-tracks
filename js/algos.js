@@ -48,9 +48,16 @@ function match(obj1, obj2){objKey1 = []; objKey2 = [];
 	}
 }
 
+//Release2
+//Write a function that takes an integer for length, and builds and returns an array of strings for the number of length. 
 
+//Create a function that takes in an integer
+//Use Random function to create random string with 1 to 10 letters.
+//Repeat as many times as integer states
 
-
+function arrayGen(int){
+	Math.random().toString(36).substring(10)
+}
 
 
 
