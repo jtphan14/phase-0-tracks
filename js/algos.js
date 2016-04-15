@@ -71,7 +71,10 @@ function randomString(length) {
 
 function arrayGen(integer){var randomArray=[];
 	var length = randomNumber();
+	for(var i = 0; i < integer; i ++){
+	var length = randomNumber();
 	randomArray.push(randomString(length));
+	}
 	return randomArray;
 
 }
@@ -92,6 +95,6 @@ console.log(match({Kobe: 24, Team: "Lakers"}, {Curry:30, Team: "Warriors"}))
 // length = randomNumber();
 // console.log(length);
 // console.log(randomString(length));
-console.log(arrayGen(1))
+console.log(arrayGen(3))
 
 
