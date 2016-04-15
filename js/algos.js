@@ -56,17 +56,26 @@ function match(obj1, obj2){objKey1 = []; objKey2 = [];
 //Repeat as many times as integer states
 
 function randomNumber() {
-	Math.floor((Math.random() * 10) + 1)
+	var randomLength = Math.floor((Math.random() * 10) + 1);
+	return randomLength
 };
 
 function randomString(length) {
 	var string = "";
-	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 	for(var i =0; i < length; i++){
 		string += possible.charAt(Math.floor(Math.random()*possible.length))
 	}
-	return string;
+		return string;
+};
+
+function arrayGen(integer){var randomArray=[];
+	var length = randomNumber();
+	randomArray.push(randomString(length));
+	return randomArray;
+
 }
+
 
 
 
@@ -80,6 +89,9 @@ longestPhrase(["Work", "Work Work", "Work Work Work Work"])
 console.log(match({name: "Joe", age: 2}, {name: "Joe", age: 4}))
 console.log(match({Kobe: 24, Team: "Lakers"}, {Curry:30, Team: "Warriors"}))
 
-randomNumber()
-console.log(randomString(4))
+// length = randomNumber();
+// console.log(length);
+// console.log(randomString(length));
+console.log(arrayGen(1))
+
 
