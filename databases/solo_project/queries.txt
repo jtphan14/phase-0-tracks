@@ -1,0 +1,22 @@
+1. Display the information in one table (either table is fine).
+SELECT * FROM employees;
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+UPDATE employees SET number = "619-400-1234" WHERE name="Shannon Keatley";
+
+3. Display the information in both tables using one query.
+SELECT * FROM employees, dept WHERE employees.dept_id = dept.id;
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+SELECT employees.name, dept.name FROM employees JOIN dept ON dept_id = dept.id;
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM employees WHERE dept_id = 3;
+
+EXAMPLE OF JOINS
+
+1. Inner Joins
+SELECT dept_id FROM employees INNER JOIN dept ON employees.dept_id = dept.id;
+
+2. Left Joins
+SELECT  number, dept_id FROM employees LEFT JOIN dept ON employees.dept_id = dept.id;
