@@ -12,3 +12,19 @@ require 'faker'
 #create SQlite3 database
 db = SQLite3::Database.new("packing_list.db")
 
+#create table method to store packing list
+create_table_cmd = <<-SQL
+	CREATE TABLE IF NOT EXISTS list(
+	id INTEGER PRIMARY KEY,
+	item VARCHAR(255),
+	quantity INT
+	)
+SQL
+
+#create a packing list tables(if it's not there already)
+db.execute(create_table_cmd)
+
+#Method to Add item to list
+def add_item(db, item, quantity)
+	db.execute("INSERT INTO list (item, quantity") VALUES (?, ?)", [item, quantity])"
+end
