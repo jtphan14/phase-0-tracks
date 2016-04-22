@@ -38,10 +38,17 @@ db.execute(create_items_cmd)
 db.execute(create_categories_cmd)
 
 #Method to Add item to list
-def add_item(db, item, quantity)
-	db.execute("INSERT INTO list (item, quantity) VALUES (?, ?)", [item, quantity])
+def add_item(db, item, quantity, category_id, packed)
+	db.execute("INSERT INTO list (item, quantity, category_id, packed) VALUES (?, ?, ?, ?)", [item, quantity, category_id, packed])
 end
 
-def remove_item(db,item,quantity, deleted_item)
-	db.execute("DELETE FROM list (item, quantity) WHERE item = deleted_items")
+#Method to Delete Item
+def remove_item(db,item)
+	db.execute("DELETE FROM list WHERE item = ?")
 end
+
+#Method to Mark Item Packed
+def pack_item(db,item,packed)
+	db.execute("UPDATE tasks SET packed? WHERE item = ?")
+end
+
