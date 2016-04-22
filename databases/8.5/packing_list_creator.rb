@@ -5,6 +5,10 @@
 #Method to remove items to list
 #Method for suggested items
 
-#require gems
+# require gems
 require 'sqlite3'
 require 'faker'
+
+#create SQlite3 database
+db = SQLite3::Database.new("packing_list.db")
+
