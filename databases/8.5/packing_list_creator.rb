@@ -73,7 +73,11 @@ def pack_item(db,item,packed)
 	db.execute("UPDATE list SET packed=? WHERE item = ?")[packed,item]
 end
 
-def print_list(db, item, quantity, category_id, packed)
+def print_list(db)
 	db.execute(SELECT * FROM list) 
+end
+
+def print_categories(db)
+	db.execute(SELECT * FROM list)
 end
 
