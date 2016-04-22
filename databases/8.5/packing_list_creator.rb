@@ -25,7 +25,7 @@ create_items_cmd = <<-SQL
 SQL
 
 create_categories_cmd = <<-SQL
-	CREATE TABLE IF NOT EXISTS list(
+	CREATE TABLE IF NOT EXISTS categories(
 	id INTEGER PRIMARY KEY,
 	category_name VARCHAR(255)
 	)
@@ -44,11 +44,19 @@ end
 
 #Method to Delete Item
 def remove_item(db,item)
-	db.execute("DELETE FROM list WHERE item = ?")
+	db.execute("DELETE FROM list WHERE item = ?") [item]
 end
 
+def update_item(db,item)
+	db.execute("UPDATE list SET item=? WHERE item = ?")[item]
+end
+
+def update_quantity(db,item,quantity)
+	db.execute("UPDATE list SET quantity=? WHERE item =?")[quantity,item]
+end
 #Method to Mark Item Packed
 def pack_item(db,item,packed)
-	db.execute("UPDATE tasks SET packed? WHERE item = ?")
+	db.execute("UPDATE list SET packed=? WHERE item = ?")[packed,item]
 end
+
 
