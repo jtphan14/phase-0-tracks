@@ -54,6 +54,11 @@ end
 def update_quantity(db,item,quantity)
 	db.execute("UPDATE list SET quantity=? WHERE item =?")[quantity,item]
 end
+
+def update_category(db,item,category_id)
+	db.execute("UPDATE list SET category_id=? WHERE item=?") [category_id,item]
+end
+
 #Method to Mark Item Packed
 def pack_item(db,item,packed)
 	db.execute("UPDATE list SET packed=? WHERE item = ?")[packed,item]
