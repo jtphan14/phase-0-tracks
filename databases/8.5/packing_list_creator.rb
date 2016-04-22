@@ -31,7 +31,6 @@ create_categories_cmd = <<-SQL
 	)
 SQL
 
-
 #create tables and populate category tables in advance
 db.execute(create_items_cmd)
 db.execute(create_categories_cmd)
@@ -40,8 +39,6 @@ db.execute(create_categories_cmd)
 # db.execute("INSERT INTO categories (category_name) VALUES ('Electronics')")
 # db.execute("INSERT INTO categories (category_name) VALUES ('Toiletries')")
 # db.execute("INSERT INTO categories (category_name) VALUES ('Misc.')")
-
-
 
 
 #------------------------------------------------------------------------------------------------
@@ -66,6 +63,7 @@ end
 def add_category (db, category)
 	db.execute("INSERT INTO categories (category_name) VALUES (?)") [category_name]
 end
+
 def update_category(db,item,category_id)
 	db.execute("UPDATE list SET category_id=? WHERE item=?") [category_id,item]
 end
@@ -75,4 +73,7 @@ def pack_item(db,item,packed)
 	db.execute("UPDATE list SET packed=? WHERE item = ?")[packed,item]
 end
 
+def print_list(db, item, quantity, category_id, packed)
+	db.execute(SELECT * FROM list) 
+end
 
