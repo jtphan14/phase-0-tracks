@@ -12,7 +12,7 @@ require 'faker'
 #create SQlite3 database
 db = SQLite3::Database.new("packing_list.db")
 
-#create table method to store items to pack
+
 create_items_cmd = <<-SQL
 	CREATE TABLE IF NOT EXISTS list(
 	id INTEGER PRIMARY KEY,
@@ -30,13 +30,21 @@ create_categories_cmd = <<-SQL
 	category_name VARCHAR(255)
 	)
 SQL
-#create category of items
 
 
-#create a packing list tables(if it's not there already)
+#create tables and populate category tables in advance
 db.execute(create_items_cmd)
 db.execute(create_categories_cmd)
+#db.execute("INSERT INTO categories (category_name) VALUES ('Clothes')")
+# db.execute("INSERT INTO categories (category_name) VALUES ('Cosmetics')")
+# db.execute("INSERT INTO categories (category_name) VALUES ('Electronics')")
+# db.execute("INSERT INTO categories (category_name) VALUES ('Toiletries')")
+# db.execute("INSERT INTO categories (category_name) VALUES ('Misc.')")
 
+
+
+
+#------------------------------------------------------------------------------------------------
 #Method to Add item to list
 def add_item(db, item, quantity, category_id, packed)
 	db.execute("INSERT INTO list (item, quantity, category_id, packed) VALUES (?, ?, ?, ?)", [item, quantity, category_id, packed])
@@ -55,6 +63,9 @@ def update_quantity(db,item,quantity)
 	db.execute("UPDATE list SET quantity=? WHERE item =?")[quantity,item]
 end
 
+def add_category (db, category)
+	db.execute("INSERT INTO categories (category_name) VALUES (?)") [category_name]
+end
 def update_category(db,item,category_id)
 	db.execute("UPDATE list SET category_id=? WHERE item=?") [category_id,item]
 end
