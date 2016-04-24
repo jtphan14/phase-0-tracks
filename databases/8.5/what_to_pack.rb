@@ -4,3 +4,7 @@
 #Method to add items to the list with statement to let them if item is already on the list
 #Method to remove items to list
 #Method for suggested items
+
+# require gems
+require 'sqlite3'
+require 'faker'
