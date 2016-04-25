@@ -34,11 +34,6 @@ SQL
 db.execute(create_list_cmd)
 db.execute(create_categories_cmd)
 
-db.execute("INSERT INTO categories (name) VALUES ('Clothes')")
-db.execute("INSERT INTO categories (name) VALUES ('Cosmetics')")
-db.execute("INSERT INTO categories (name) VALUES ('Electronics')")
-db.execute("INSERT INTO categories (name) VALUES ('Toiletries')")
-db.execute("INSERT INTO categories (name) VALUES ('Misc')")
 # db.execute("INSERT INTO list (item, quantity, category_id, packed) 
 # 			VALUES ('Cell Phone Chareger', 1, 3, 'False')")
 # db.execute("INSERT INTO list (item, quantity, category_id, packed) 
@@ -80,6 +75,11 @@ def print_list(db)
 end
 # # #--------------------------------------------------------------------
 puts "Hello! Lets get you ready for your trip by creating your packing list. We are going to start off by asking you a few questions."
+	db.execute("INSERT INTO categories (name) VALUES ('Clothes')")
+	db.execute("INSERT INTO categories (name) VALUES ('Cosmetics')")
+	db.execute("INSERT INTO categories (name) VALUES ('Electronics')")
+	db.execute("INSERT INTO categories (name) VALUES ('Toiletries')")
+	db.execute("INSERT INTO categories (name) VALUES ('Misc')")
 puts "Let's get started. How many days will your vacation be?"
 	days = gets.chomp.to_i
 puts "Thank you! A #{days} day vacation sounds amazing!"
@@ -145,10 +145,6 @@ puts "Type in item name once packed! Type 'done' when finished"
 		packed_item == gets.chomp.downcase
 	end
 puts "Awesome! You're all packed! Enjoy your trip!"
-
-
-
-
 
 
 #--------------------------------------------------------------------
