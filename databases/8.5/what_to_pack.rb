@@ -159,3 +159,10 @@ puts "Awesome! You're all packed! Enjoy your trip!"
 # print_list(db)
 # print_quantity(db,"pants")
 
+#------------------------------------------------------------------
+# Additional Items to Work on in the Future:
+# -Check if item is already in the list
+# -Account for user error
+# -Complete list once all packed
+# -Make printed list easier to read
+
