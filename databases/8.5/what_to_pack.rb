@@ -32,3 +32,10 @@ SQL
 
 db.execute(create_list_cmd)
 db.execute(create_categories_cmd)
+
+# db.execute("INSERT INTO categories (name) VALUES ('Clothes')")
+db.execute("INSERT INTO categories (name) VALUES ('Cosmetics')")
+db.execute("INSERT INTO categories (name) VALUES ('Electronics')")
+db.execute("INSERT INTO categories (name) VALUES ('Toiletries')")
+db.execute("INSERT INTO categories (name) VALUES ('Misc')")
+
