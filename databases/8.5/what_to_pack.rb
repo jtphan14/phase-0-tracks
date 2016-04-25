@@ -41,7 +41,8 @@ db.execute(create_categories_cmd)
 # db.execute("INSERT INTO categories (name) VALUES ('Misc')")
 # db.execute("INSERT INTO list (item, quantity, category_id, packed) 
 # 			VALUES ('Cell Phone Chareger', 1, 3, 'False')")
-
+# db.execute("INSERT INTO list (item, quantity, category_id, packed) 
+# 			VALUES ('shirt', 2, 3, 'False')")
 #-----------------------------------------------------------------------
 
 def add_item(db, item, quantity, category_id, packed)
@@ -49,24 +50,39 @@ def add_item(db, item, quantity, category_id, packed)
 end
 
 def remove_item(db,item)
-	db.execute("DELETE FROM list WHERE item = ?") [item]
+	packing_list = db.execute("SELECT * FROM list")
+		packing_list.each do |list|
+			if list['item'] == item
+				puts "#{list['item']} Quantity:#{list['quantity']} "
+			end
+	end
+
 end
 
 def update_item(db,item)
 	db.execute("UPDATE list SET item=? WHERE item = ?")[item]
 end
 
+def print_quantity(db,item)
+	packing_list = db.execute("SELECT * FROM list")
+		packing_list.each do |list|
+			if list['item'] == item
+				puts "#{list['item']} Quantity:#{list['quantity']} "
+			end
+	end
+end
+
 def update_quantity(db,item,quantity)
 	db.execute("UPDATE list SET quantity=? WHERE item =?")[quantity,item]
 end
 
-def add_category (db, category)
-	db.execute("INSERT INTO categories (category_name) VALUES (?)") [category_name]
-end
+# def add_category (db, category)
+# 	db.execute("INSERT INTO categories (category_name) VALUES (?)") [category_name]
+# end
 
-def update_category(db,item,category_id)
-	db.execute("UPDATE list SET category_id=? WHERE item=?") [category_id,item]
-end
+# def update_category(db,item,category_id)
+# 	db.execute("UPDATE list SET category_id=? WHERE item=?") [category_id,item]
+# end
 
 def pack_item(db,item,packed)
 	db.execute("UPDATE list SET packed=? WHERE item = ?")[packed,item]
@@ -82,7 +98,7 @@ def print_list(db)
 		end
 	end
 end
-#--------------------------------------------------------------------
+# #--------------------------------------------------------------------
 puts "Hello! Lets get you ready for your trip by creating your packing list. We are going to start off by asking you a few questions."
 puts "Let's get started. How many days will your vacation be?"
 	days = gets.chomp.to_i
@@ -112,8 +128,23 @@ puts "What season will you be heading there? (Winter, Spring, Summer, Fall) "
 puts "We got your list started! Here's a list of your packing essentials"
 	print_list(db)
 
-puts "Is there anything else you'd like to add to the list? Yes or No"
-	add = gets.chomp
+puts "If there is anything else, you'd like to add to the list, please input now. You will have a chance to update quantities later on. Otherwise, type 'done'"
+	item_to_add = gets.chomp.downcase
+
+	until item_to_add == "done"
+		add_item(db,item_to_add,1,1,"false")
+		print_list(db)
+		puts "What else would you like to add? Type 'done' when complete"
+		item_to_add = gets.chomp.downcase
+	end
+print_list(db)
+
+puts "If you would like to update the quantity, please enter in the item you would like to change"
+	item = gets.chomp.downcase
+print_quantity(db,item)
+# puts "What would you like to update the quantity to?"
+# 	quantity = gets.chomp.to_i
+
 
 
 
@@ -123,10 +154,10 @@ puts "Is there anything else you'd like to add to the list? Yes or No"
 #--------------------------------------------------------------------
 #DRIVERCODE
  
-# add_item(db,"pants",4,1,'false'
+# add_item(db,"pants",4,1,'false')
 # packing_list = print_list(db)
 # packing_list.each do |list|
 # 	puts "#{list['item']} Quantity:#{list['quantity']} Category: #{list['category']} Packed: #{list['packed']}"
-# end
+# # end
 
 
