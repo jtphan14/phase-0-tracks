@@ -11,3 +11,24 @@ require 'faker'
 
 #create SQlite3 database
 db = SQLite3::Database.new("PackingList.db")
+
+create_list_cmd = <<-SQL
+	CREATE TABLE IF NOT EXISTS list(
+	id INTEGER PRIMARY KEY,
+	item VARCHAR(255),
+	quantity INT,
+	category_id INT,
+	packed BOOLEAN,
+	FOREIGN KEY (category_id) REFERENCES categories(id)
+	)
+SQL
+
+create_categories_cmd = <<-SQL
+	CREATE TABLE IF NOT EXISTS categories(
+	id INTEGER PRIMARY KEY,
+	name VARCHAR(255)
+	)
+SQL
+
+db.execute(create_list_cmd)
+db.execute(create_categories_cmd)
