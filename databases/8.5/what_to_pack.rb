@@ -11,6 +11,7 @@ require 'faker'
 
 #create SQlite3 database
 db = SQLite3::Database.new("PackingList.db")
+db.results_as_hash = true
 
 create_list_cmd = <<-SQL
 	CREATE TABLE IF NOT EXISTS list(
@@ -74,3 +75,14 @@ end
 def print_list(db)
 	db.execute("SELECT list.item, list.quantity, categories.name, list.packed FROM list JOIN categories ON list.category_id = categories.id")
 end
+
+#--------------------------------------------------------------------
+#DRIVERCODE
+ 
+# add_item(db,"pants",4,1,'false'
+# packing_list = print_list(db)
+# packing_list.each do |list|
+# 	puts "#{list['item']} Quantity:#{list['quantity']} Category: #{list['category']} Packed: #{list['packed']}"
+# end
+
+
