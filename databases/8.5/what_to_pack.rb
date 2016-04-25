@@ -38,6 +38,39 @@ db.execute(create_categories_cmd)
 # db.execute("INSERT INTO categories (name) VALUES ('Electronics')")
 # db.execute("INSERT INTO categories (name) VALUES ('Toiletries')")
 # db.execute("INSERT INTO categories (name) VALUES ('Misc')")
-db.execute("INSERT INTO list (item, quantity, category_id, packed) 
-			VALUES ('Cell Phone Chareger', 1, 3, 'False')")
+# db.execute("INSERT INTO list (item, quantity, category_id, packed) 
+# 			VALUES ('Cell Phone Chareger', 1, 3, 'False')")
 
+#-----------------------------------------------------------------------
+
+def add_item(db, item, quantity, category_id, packed)
+	db.execute("INSERT INTO list (item, quantity, category_id, packed) VALUES (?, ?, ?, ?)", [item, quantity, category_id, packed])
+end
+
+def remove_item(db,item)
+	db.execute("DELETE FROM list WHERE item = ?") [item]
+end
+
+def update_item(db,item)
+	db.execute("UPDATE list SET item=? WHERE item = ?")[item]
+end
+
+def update_quantity(db,item,quantity)
+	db.execute("UPDATE list SET quantity=? WHERE item =?")[quantity,item]
+end
+
+def add_category (db, category)
+	db.execute("INSERT INTO categories (category_name) VALUES (?)") [category_name]
+end
+
+def update_category(db,item,category_id)
+	db.execute("UPDATE list SET category_id=? WHERE item=?") [category_id,item]
+end
+
+def pack_item(db,item,packed)
+	db.execute("UPDATE list SET packed=? WHERE item = ?")[packed,item]
+end
+
+def print_list(db)
+	db.execute("SELECT list.item, list.quantity, categories.name, list.packed FROM list JOIN categories ON list.category_id = categories.id")
+end
