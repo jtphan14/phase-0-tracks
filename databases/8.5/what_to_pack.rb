@@ -75,6 +75,23 @@ end
 def print_list(db)
 	db.execute("SELECT list.item, list.quantity, categories.name, list.packed FROM list JOIN categories ON list.category_id = categories.id")
 end
+#--------------------------------------------------------------------
+puts "Hello! Lets get you ready for your trip by creating your packing list. We are going to start off by asking you a few questions."
+puts "Let's get started. How many days will your vacation be?"
+	days = gets.chomp.to_i
+puts "Thank you! A #{days} vacation sounds amazing!"
+	add_item(db,"underwear",days,1,"false")
+	add_item(db,"shirts",days,1,"false")
+	add_item(db,"pants",days,1,"false")
+	add_item(db,"toothbrush/toothpaste",1,4,"false")
+	add_item(db,"cellphone charger",1,3,"false")
+
+
+
+
+
+
+
 
 #--------------------------------------------------------------------
 #DRIVERCODE
