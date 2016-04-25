@@ -73,20 +73,47 @@ def pack_item(db,item,packed)
 end
 
 def print_list(db)
-	db.execute("SELECT list.item, list.quantity, categories.name, list.packed FROM list JOIN categories ON list.category_id = categories.id")
+	packing_list = db.execute("SELECT list.item, list.quantity, categories.name, list.packed FROM list JOIN categories ON list.category_id = categories.id")
+	packing_list.each do |list|
+		if list['packed'] = "true"
+			puts "#{list['item']} Quantity:#{list['quantity']} Category: #{list['category']} Packed: No"
+		else list['packed'] = "false"
+			puts "#{list['item']} Quantity:#{list['quantity']} Category: #{list['category']} Packed: Yes"
+		end
+	end
 end
 #--------------------------------------------------------------------
 puts "Hello! Lets get you ready for your trip by creating your packing list. We are going to start off by asking you a few questions."
 puts "Let's get started. How many days will your vacation be?"
 	days = gets.chomp.to_i
-puts "Thank you! A #{days} vacation sounds amazing!"
+puts "Thank you! A #{days} day vacation sounds amazing!"
 	add_item(db,"underwear",days,1,"false")
 	add_item(db,"shirts",days,1,"false")
 	add_item(db,"pants",days,1,"false")
 	add_item(db,"toothbrush/toothpaste",1,4,"false")
 	add_item(db,"cellphone charger",1,3,"false")
+puts "What season will you be heading there? (Winter, Spring, Summer, Fall) "
+	season = gets.chomp.downcase.to_s
 
+	if season == "winter"
+		add_item(db,"heavy jacket",1,1,"false")
+		add_item(db,"gloves",1,1,"false")
+		add_item(db,"boots",1,1,"false")
+	elsif season == "spring"
+		add_item(db,"allergy medicine",1,5,"false")
+	elsif season == "summer"
+		add_item(db,"swimsuit",1,1,"false")
+		add_item(db,"flip flops",1,1,"false")
+		add_item(db,"sunblock",1,5,"false")
+	elsif season == "fall"
+		add_item(db,"umbrella",1,1,"false")
+	end
 
+puts "We got your list started! Here's a list of your packing essentials"
+	print_list(db)
+
+puts "Is there anything else you'd like to add to the list? Yes or No"
+	add = gets.chomp
 
 
 
