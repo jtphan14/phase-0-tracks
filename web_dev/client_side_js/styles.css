@@ -1,0 +1,159 @@
+/*ESSE STYLE CSS EH PARA O SOLO CHALLENGE*/
+body {
+  background-color: #c6c6c6;
+}
+
+h1 {
+  font-family: garamond;
+  font-style: italic;
+  font-size: 300%;
+  text-align:center;
+}
+
+#aside{
+  /*background-color: #000000;*/
+ /* border: .5em solid #000;*/
+  max-width: 24%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: .8%;
+  float: left;
+}
+#se_side{
+  
+  /*border: .5em solid #000;*/
+  max-width: 76%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: .8%;
+  float: right;
+}
+
+
+
+.intro {
+    margin-top: 1%;
+    border: .5em solid #73AD21;
+    background-color: #fffdc2;
+}
+.intro1 {
+  font-size: 150%;
+  margin-left: 20%;
+  margin-top: 3%;
+}
+.imagen{
+  margin-top: -9%;
+  margin-left: 0%
+}
+
+h2 {
+  font-family: garamond;
+  font-style: italic;
+  font-size: 200%;
+}
+
+.maintitle {
+  padding: 1%;
+  background-color: #879bff;
+}
+
+main {
+  margin-top: 2%;
+  max-width: 100%;
+  background-image: url(http://www.grandehoteldabarra.com.br/wp-content/uploads/2013/08/porto-da-barra.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ }
+.tabwikipedia {
+  margin-left: 3%;
+  padding: 0%;
+  min-width: 30%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 1%;
+}
+.tabela {
+  padding-left: 9%;
+  border: .5em solid #0012c1;
+  width: 100%;
+  background-color: white;
+
+}
+table {
+  background-color: white;
+}
+th {
+  background-color: #f7f37f;
+}
+tr:hover {
+  background-color: #fffdc2;
+}
+
+.knownhead {
+  font-size: 170%;
+}
+.popular {
+  font-size: 150%;
+}
+
+.divrio:hover {
+  background-color: yellow;
+}
+
+
+#brasil {
+  padding: 1%;
+  min-width: 30%;
+  margin-left: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.tableposition {
+  margin-left: 10%;
+  padding-bottom: 10%;
+}
+
+a:link {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: pink;
+}
+
+
+.external-links {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 1%;
+  background-color: #fffdc2;
+  display: inline-flex;
+  font-size: 80%;
+}
+
+#footnote {
+  width: 99.5%;
+  margin: auto;
+  position: fixed;
+  bottom: 0px;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 999px) {
+  body {
+    background-color: white;
+  }
+  .maintitle {
+    background-color: #01573e;
+  }
+  .intro {
+    background-color: #fdb813;
+  }
+  .tabela {
+    background-color: #005dab;
+  }
+
+}
+
