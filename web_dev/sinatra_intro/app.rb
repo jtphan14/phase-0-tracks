@@ -60,3 +60,9 @@ get '/great_job' do
     "Hello, you!"
   end
 end
+
+#Write a route that uses route parameters to add two numbers and respond with the result.
+
+get '/:num_1/adds/:num_2' do
+  name = params[:num_1].to_i
+end
