@@ -10,8 +10,21 @@ $(document).ready(function(){
     });
 });
 
-// $(document).click(function(){
-//     $('img).hide("slow", function(){
-//         alert("The paragraph is now hidden");
-//     });
-// });
+
+$(document).ready(function(){
+    $("#show").click(function(){
+        $('img').animate({
+            left: '250px',
+            height: '+=150px',
+            width: '+=150px'
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+    	$('img').hide("slow", function(){
+        	alert("The picture is now hidden");
+    	});
+    });	
+});
