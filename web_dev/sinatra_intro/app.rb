@@ -77,7 +77,8 @@ get '/student_search/:name' do
   end
   if name.include?(params[:name])
     "yes"
-    # student = db.execute("SELECT * FROM students WHERE ")
+    # Code to access that students info... Need to work on.
+    #student = db.execute("SELECT * FROM students WHERE ")
     # "ID: #{student['id']}<br>"
     # "Name: #{student['name']}<br>"
     # "Age: #{student['age']}<br>"
