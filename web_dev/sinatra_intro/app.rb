@@ -76,7 +76,7 @@ get '/student_search/:name' do
     name << first_name[0]
   end
   if name.include?(params[:name])
-    "yes"
+    "Yes, this student is in the database."
     # Code to access that students info... Need to work on.
     #student = db.execute("SELECT * FROM students WHERE ")
     # "ID: #{student['id']}<br>"
