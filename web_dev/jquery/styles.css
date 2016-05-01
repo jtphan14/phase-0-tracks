@@ -1,0 +1,13 @@
+body {
+	font-family: arial;
+
+}
+
+img {
+	display: inline-block;
+}
+
+button {
+	padding: 10px;
+	display:block;
+}
