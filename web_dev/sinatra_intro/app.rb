@@ -86,4 +86,5 @@ get '/student_search/:name' do
   else
     "Sorry, there are no student's by that name"
   end
-  end
+end
+
