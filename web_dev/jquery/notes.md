@@ -21,3 +21,12 @@
      $(div).ready(.slideDown('slow')){
 });
 ```
+
+Code to change id or class
+```
+$(document).ready(function() {
+    $('button').click(function() {
+        $('div').fadeOut('slow');
+    });
+});
+```
